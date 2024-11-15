@@ -8,7 +8,7 @@ const LeftNavbar = () => {
     useEffect(() => {
         fetch("https://openapi.programming-hero.com/api/news/categories")
             .then(response => response.json())
-            .then(data => setCategories(data.data.news_category.reverse()));
+            .then(data => setCategories(data.data.news_category));
     }, [])
 
     return (
@@ -18,7 +18,7 @@ const LeftNavbar = () => {
             <div className="flex flex-col gap-2 mt">
                 {
                     categories.map(category=>
-                        <NavLink to={`/category/${category.category_name}`} key={category.category_id} className="btn">{category.category_name}</NavLink>
+                        <NavLink to={`/category/${category.category_id}`} key={category.category_id} className="btn">{category.category_name}</NavLink>
                     )
                 }
             </div>

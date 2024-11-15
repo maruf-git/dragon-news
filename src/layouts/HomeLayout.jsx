@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Marquee from "react-fast-marquee";
 import Navbar from "../components/Navbar";
@@ -36,8 +36,8 @@ const HomeLayout = () => {
 
                 </aside>
                 <section className="col-span-6">
-                    news
-
+                    {/* category news */}
+                    <Outlet></Outlet>
                 </section>
                 <aside className="col-span-3">
                    <RightNavbar></RightNavbar>
