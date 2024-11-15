@@ -6,15 +6,22 @@ import AuthLayout from "../layouts/AuthLayout";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <HomeLayout></HomeLayout>
+        element: <HomeLayout></HomeLayout>,
+        children: [
+            // {
+            //     path: "/category/:id",
+            //     element:
+            // }
+
+        ]
     },
     {
-        path:"/news",
+        path: "/news",
         element: <NewsLayout></NewsLayout>
     },
     {
-        path:"/authentication",
-        element:<AuthLayout></AuthLayout>
+        path: "/authentication",
+        element: <AuthLayout></AuthLayout>
     }
 ]);
 
